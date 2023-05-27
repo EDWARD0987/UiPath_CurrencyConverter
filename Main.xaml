@@ -1,0 +1,298 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="973,2901" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Currency_Converter" sap:VirtualizedContainerService.HintSize="546,2836" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="100" Name="inputCurrency" />
+      <Variable x:TypeArguments="x:String" Name="outputcurrency" />
+      <Variable x:TypeArguments="x:String" Name="FromCurrency" />
+      <Variable x:TypeArguments="x:String" Name="ToCurrency" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="484,239" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Enter Amount" Title="Currency Converter">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[inputCurrency]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog: From Currency" sap:VirtualizedContainerService.HintSize="484,292" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Enter From Currency" OptionsString="USD; GHS; NGN;GBP;EUR" Title="Currency Converter">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[FromCurrency]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog: To  Currency" sap:VirtualizedContainerService.HintSize="484,292" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Enter To Currency" OptionsString="USD; GHS; NGN;GBP;EUR" Title="Currency Converter">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[ToCurrency]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Unit Converter" sap:VirtualizedContainerService.HintSize="484,1782" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="75644e19-f72e-43d4-b89a-2362c7494cb3" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1565" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="variable1" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Common Converters'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="75644e19-f72e-43d4-b89a-2362c7494cb3" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.unitconverters.net/" CvTextArgument="Common Converters" CvType="Text" DesignTimeRectangle="1131, 252, 149, 14" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Common Converters'" Guid="898c0072-c814-4ece-aa86-52667f4c872a" InformativeScreenshot="04fa996b029d10beab84c56505ed039b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Unit Converter' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Currency'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="75644e19-f72e-43d4-b89a-2362c7494cb3" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.unitconverters.net/" CvTextArgument="Currency" CvType="Text" DesignTimeRectangle="1120, 474, 166, 25" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Currency'" FullSelectorArgument="&lt;webctrl aaname='Currency' parentid='ocsubnav' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Currency' parentid='ocsubnav' tag='A' type='' class='' check:innerText='Currency' /&gt;" Guid="a5d0e646-8e84-422e-a002-9d2599589ecc" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKoAAAAdCAYAAAA6ufdPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHRSURBVHhe7Zc9jsMgEEZzp72JD5EyR0jl3rUPkN5FzpAyUk7hJvIVWBjAy4CNtYtXYeTvSSgxP0OiPIbJSWlO5y/zAkC1QFQgAogKRABRgQggKhABRAUigKhABBAViACiAhHsJup4v1Ac35r7240AUM4uoj56I2enHu5ZqZdqISvYkXJRx0E154u6je7Z8+wieQH4O8Wi0pV/HVTsKSOR2Wbc9qnf0linWsrKts9k6KbvdL/u87Fpni8tglgudtsHpUf/coMWm/HDsbe6Xd3+Dvoe0TpQD8WikgRbP/CmqLxMWCslZrHCbO0F9p/BPfu5/CBZQc1eXMxUXFAXlYjKS4ckphGTZe1ArFzsQMwEWhfKjjKlZiq5+vOi0h56ftxIwKyoUSZmBLKbg7B12MBH+b8/U2F/oahpRg3IiprJqBp//Zv9lmUGtVAuqobEYlenFeRHNivPLAzVmL8QNc6MtGZtPZ8bZ3wW28Vhf85AlewiqiG+nuMsxsb7IVNjLomqmaWK4m+IarAHybWFWnezdAEfZzdRpWIkXisNQD0cXFSTfXHtS+C4oro6GdlUBoe/+oEMICoQAUQFIoCoQAQQFYhgFnWaJjS0ahtERRPQJvUNfPj5jMnBE1QAAAAASUVORK5CYII=" InformativeScreenshot="fb5bf25aa7e0f2b1cdb8eb4494af064c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Unit Converter' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NSelectItem DisplayName="Select Item :From 'USD [United'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="USD *" ScopeIdentifier="75644e19-f72e-43d4-b89a-2362c7494cb3" Version="V3">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="50">
+                  <x:String>USD [United States Dollar]</x:String>
+                  <x:String>EUR [Euro]</x:String>
+                  <x:String>AUD [Australian Dollar]</x:String>
+                  <x:String>CAD [Canadian Dollar]</x:String>
+                  <x:String>CHF [Swiss Franc]</x:String>
+                  <x:String>CNY [Chinese Yuan]</x:String>
+                  <x:String>EUR [Euro]</x:String>
+                  <x:String>GBP [British Pound Sterling]</x:String>
+                  <x:String>INR [Indian Rupee]</x:String>
+                  <x:String>JPY [Japanese Yen]</x:String>
+                  <x:String>MXN [Mexican Peso]</x:String>
+                  <x:String>AED [United Arab Emirates Dirham]</x:String>
+                  <x:String>AFN [Afghan Afghani]</x:String>
+                  <x:String>ALL [Albanian Lek]</x:String>
+                  <x:String>AMD [Armenian Dram]</x:String>
+                  <x:String>ANG [Netherlands Antillean Guilder]</x:String>
+                  <x:String>AOA [Angolan Kwanza]</x:String>
+                  <x:String>ARS [Argentine Peso]</x:String>
+                  <x:String>AWG [Aruban Florin]</x:String>
+                  <x:String>AZN [Azerbaijani Manat]</x:String>
+                  <x:String>BAM [Bosnia-Herzegovina Convertible Mark]</x:String>
+                  <x:String>BBD [Barbadian Dollar]</x:String>
+                  <x:String>BDT [Bangladeshi Taka]</x:String>
+                  <x:String>BGN [Bulgarian Lev]</x:String>
+                  <x:String>BHD [Bahraini Dinar]</x:String>
+                  <x:String>BIF [Burundian Franc]</x:String>
+                  <x:String>BMD [Bermudan Dollar]</x:String>
+                  <x:String>BND [Brunei Dollar]</x:String>
+                  <x:String>BOB [Bolivian Boliviano]</x:String>
+                  <x:String>BRL [Brazilian Real]</x:String>
+                  <x:String>BSD [Bahamian Dollar]</x:String>
+                  <x:String>BTC [Bitcoin]</x:String>
+                  <x:String>BTN [Bhutanese Ngultrum]</x:String>
+                  <x:String>BWP [Botswanan Pula]</x:String>
+                  <x:String>BYN [Belarusian Ruble]</x:String>
+                  <x:String>BZD [Belize Dollar]</x:String>
+                  <x:String>CDF [Congolese Franc]</x:String>
+                  <x:String>CLF [Chilean Unit of Account (UF)]</x:String>
+                  <x:String>CLP [Chilean Peso]</x:String>
+                  <x:String>CNH [Chinese Yuan (Offshore)]</x:String>
+                  <x:String>COP [Colombian Peso]</x:String>
+                  <x:String>CRC [Costa Rican Colón]</x:String>
+                  <x:String>CUC [Cuban Convertible Peso]</x:String>
+                  <x:String>CUP [Cuban Peso]</x:String>
+                  <x:String>CVE [Cape Verdean Escudo]</x:String>
+                  <x:String>CZK [Czech Republic Koruna]</x:String>
+                  <x:String>DJF [Djiboutian Franc]</x:String>
+                  <x:String>DKK [Danish Krone]</x:String>
+                  <x:String>DOP [Dominican Peso]</x:String>
+                  <x:String>DZD [Algerian Dinar]</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.unitconverters.net/currency-converter.html" DesignTimeRectangle="479, 382, 282, 311" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'SELECT ucfromunit'" FullSelectorArgument="&lt;webctrl id='uctable' tag='TABLE' /&gt;&lt;webctrl id='ucfromunit' tableRow='2' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='uctable' tag='TABLE' /&gt;&lt;webctrl id='ucfromunit' type='' tag='SELECT' class='ucselect' aaname='' /&gt;" Guid="ca51c8b9-0c71-4f14-be9f-93c74200b105" InformativeScreenshot="44eb4052dbf0d2a1d599d6fa9ffca60c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Currency Converter' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="480, 386, 257, 20" FriendlyName="'USD [United'" FullSelectorArgument="&lt;webctrl id='uctable' tag='TABLE' /&gt;&lt;webctrl id='ucfromunit' tableRow='2' tag='SELECT' /&gt;&lt;webctrl tableRow='2' tag='OPTION' /&gt;" FuzzySelectorArgument="&lt;webctrl id='uctable' tag='TABLE' /&gt;&lt;webctrl id='ucfromunit' tag='SELECT' /&gt;&lt;webctrl type='' tag='OPTION' class='' aaname='USD [United States Dollar]' check:innerText='USD [United States Dollar]' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQUAAAAYCAYAAADzqehgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUTSURBVHhe7Vxbbus6DMwaA5wNBdlKupR0If1Id+EjiZTNt5yn04ADCLfVgxpRw4lPY9zd7+/vtNvtJhM/p2m/O07Hw27a/TtNF+ye0cZ30/Ebfxc4y3Xfx7LXfjr94O8dGGf/pXZgUPEI6tj+cAz53A2P/9U4T8dn8vRwZ/41+DkuX3v3fq4DxL2eT+IRCE1hLsKBmO42hYoVBeeawszjMp3+lTmHMw48GJ9qChU3nS1N4RMRmAK9GOeSHmkKZdaooD1TaGIsTzR1Jf2ZwhSs4oMcypl6Y4In/UteyvqvGqf2L7EaVzKf782LCXhwzuvWw3/nOSMzvCH/kge/a34OnWOdTx7fyx/ETVPYBr4pCAGZBflQU3D2ILDHhZgdTmNTMIpC8lX8e1EaBc32wnlzbF5MEHeJsXa95ubfRYPiz8H37QVNzqb24OfgOTbyiXezFHs/hzRx6E9T2AauKShhWqJ7sCmYhUugi6VAcUAxinljU1ghRMXfWsMLpYNzF3Na3F4Y69fzfY0ilLgm/87c6BxsfbsXuV5ytM5R4fUnXgHbFMxi951fCrjjFaZg9Vn7jE0BY5XzuBxUXLuAF8B4i8niinUtrvy0rFi5vuGxptB+tjixGJyHe3+ok/kcwhR0/qA/TWEbmKYAgiCXyBoRyhpToCIdiNIscAI9LopGNCqqNaZQoc4e8rdFPZtLbbgn5y7WtbhLXq9e33C/KdA93AJnMTgPvgb59HM0XvaTgtYP9KcpbAPDFAJxKRPwLrXCiBOKEuZHQuCFURDEk3PXmgJFN4iZk5pvnN8xyrCoW1w0hVvWNwT31nFF/uHs3pNC7+c8WI7NvSRHTz/Qn6awDbQphJ/+eKmzOKNCNi48EmUoWIAsdGUSFC2eEKwQOfSt2LOLWHH0ziiLCea5RU3X3LK+4U5TkGPO3MicqCkwg+hAbaUpvDeUKbRLV6JcoAqpiccRqBSFJ0oUy0gETJDDNVhIrKAJzy7QmY8hRGmQir8haoMX5LS2nlexrsXFsVvWN9xhCmYuMR7Vgsyh4MGMQM3t8UqbdWGdowL6/btNPBPCFOAyQmFZAsI+EC42KwYKxWpaGBrUFFZ/yhNRw5q+Z+lvvHWRU152oZTWzueIWp6zzOV8xbo2Xxff6vUNa02BxCXNy/9iSLXJfHMezBT67/NayCW/Eyd/2J+msA3MPzS+K6gpJD4ZaQpbIk0h8YZIU9gSf88UCtfavMfdxN8GveM0hW3wp0whkUg8H2kKiUSCIU0hkUgwpCkkEgmGNIVEIsEwMAX4aqiO9xb+Rbi/HON9bXjDyzMU0bcP8kUZ9jLQW0C+XOS9uPNgWC+WYbvtr/twjnmtfPHqFlBd5FfOm8M1hV5kXLRoEs7F1aIN/z+J7fKNtxDN12w17PcUbE42/y2x4o3DZwBzq/OAebuazxNMAWHfb+LVsE3BFVKBV8DzmkD8nilURGMISzSRkNrY2zwxvJspFERjLtIUPh2mKcSXc5nOpfAl4JMZxEF/ZggLf1w0itdI1N9nh0OJMzfKpwv+DFz6HCMXYDjRHDxPHz+cxPmMfz6E3DCvZZ8zPgVZcxQGObLuuj9l9cY/AMamEOcG1h+/gFcd79xi3SVeBcMUxKWvAhZAF7wnxNAUxqJQ44YgQxj7g4B7jKWQZ+54FpoPzVM+imMcMgf2oXOEKQy5lai9WIN9FAamIA0c9iQ81PmFPsQdrM6NoQO9NvF6TNN/zwuQRRKBTvYAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NSelectItem DisplayName="Select Item:To GHS CEDIS" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="GHS *" ScopeIdentifier="75644e19-f72e-43d4-b89a-2362c7494cb3" Version="V3">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="50">
+                  <x:String>BWP [Botswanan Pula]</x:String>
+                  <x:String>BYN [Belarusian Ruble]</x:String>
+                  <x:String>BZD [Belize Dollar]</x:String>
+                  <x:String>CDF [Congolese Franc]</x:String>
+                  <x:String>CLF [Chilean Unit of Account (UF)]</x:String>
+                  <x:String>CLP [Chilean Peso]</x:String>
+                  <x:String>CNH [Chinese Yuan (Offshore)]</x:String>
+                  <x:String>COP [Colombian Peso]</x:String>
+                  <x:String>CRC [Costa Rican Colón]</x:String>
+                  <x:String>CUC [Cuban Convertible Peso]</x:String>
+                  <x:String>CUP [Cuban Peso]</x:String>
+                  <x:String>CVE [Cape Verdean Escudo]</x:String>
+                  <x:String>CZK [Czech Republic Koruna]</x:String>
+                  <x:String>DJF [Djiboutian Franc]</x:String>
+                  <x:String>DKK [Danish Krone]</x:String>
+                  <x:String>DOP [Dominican Peso]</x:String>
+                  <x:String>DZD [Algerian Dinar]</x:String>
+                  <x:String>EGP [Egyptian Pound]</x:String>
+                  <x:String>ERN [Eritrean Nakfa]</x:String>
+                  <x:String>ETB [Ethiopian Birr]</x:String>
+                  <x:String>FJD [Fijian Dollar]</x:String>
+                  <x:String>FKP [Falkland Islands Pound]</x:String>
+                  <x:String>GEL [Georgian Lari]</x:String>
+                  <x:String>GGP [Guernsey Pound]</x:String>
+                  <x:String>GHS [Ghanaian Cedi]</x:String>
+                  <x:String>GIP [Gibraltar Pound]</x:String>
+                  <x:String>GMD [Gambian Dalasi]</x:String>
+                  <x:String>GNF [Guinean Franc]</x:String>
+                  <x:String>GTQ [Guatemalan Quetzal]</x:String>
+                  <x:String>GYD [Guyanaese Dollar]</x:String>
+                  <x:String>HKD [Hong Kong Dollar]</x:String>
+                  <x:String>HNL [Honduran Lempira]</x:String>
+                  <x:String>HRK [Croatian Kuna]</x:String>
+                  <x:String>HTG [Haitian Gourde]</x:String>
+                  <x:String>HUF [Hungarian Forint]</x:String>
+                  <x:String>IDR [Indonesian Rupiah]</x:String>
+                  <x:String>ILS [Israeli New Sheqel]</x:String>
+                  <x:String>IMP [Manx pound]</x:String>
+                  <x:String>IQD [Iraqi Dinar]</x:String>
+                  <x:String>IRR [Iranian Rial]</x:String>
+                  <x:String>ISK [Icelandic Króna]</x:String>
+                  <x:String>JEP [Jersey Pound]</x:String>
+                  <x:String>JMD [Jamaican Dollar]</x:String>
+                  <x:String>JOD [Jordanian Dinar]</x:String>
+                  <x:String>KES [Kenyan Shilling]</x:String>
+                  <x:String>KGS [Kyrgystani Som]</x:String>
+                  <x:String>KHR [Cambodian Riel]</x:String>
+                  <x:String>KMF [Comorian Franc]</x:String>
+                  <x:String>KPW [North Korean Won]</x:String>
+                  <x:String>KRW [South Korean Won]</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.unitconverters.net/currency-converter.html" DesignTimeRectangle="788, 382, 282, 311" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'SELECT uctounit'" FullSelectorArgument="&lt;webctrl id='uctable' tag='TABLE' /&gt;&lt;webctrl id='uctounit' tableRow='2' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='uctable' tag='TABLE' /&gt;&lt;webctrl id='uctounit' type='' tag='SELECT' class='ucselect' aaname='' /&gt;" Guid="4cbeb24f-4d80-4a8d-807b-6d7b2d1bc09a" InformativeScreenshot="ee52e8b52a64450feb51ee12d9c4402d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Currency Converter' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="792, 547, 257, 20" FriendlyName="'INR [Indian Rupee]'" FullSelectorArgument="&lt;webctrl id='uctable' tag='TABLE' /&gt;&lt;webctrl id='uctounit' tableRow='2' tag='SELECT' /&gt;&lt;webctrl aaname='INR [Indian Rupee]' parentid='uctounit' tableRow='2' tag='OPTION' /&gt;" FuzzySelectorArgument="&lt;webctrl id='uctable' tag='TABLE' /&gt;&lt;webctrl id='uctounit' tag='SELECT' /&gt;&lt;webctrl aaname='INR [Indian Rupee]' parentid='uctounit' type='' tag='OPTION' class='' check:innerText='INR [Indian Rupee]' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQUAAAAYCAYAAADzqehgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM/SURBVHhe7ZptbqswEEVZY6RuqMpWyFLoQvojy+DZnrHxDGMwX0lefY+EKsNgxsT3NJXajQAAkAEpAAAEkAIAQAApAAAEphSej9vYffXjk8fjbz/eum7svgc+IRm+3bWsPox9vXXk85oM4z3V391oOnf/CYMDPMf+y82b1nHWvCvE91c4Ln/+XkTf8bMAf51tUihsYFMKZvg58AW5EFRze+R3XyWFF8Hvz+o/vOvuNva/fOIDoR4hhVbYLAVrc9RLwfFzXwlBW1J4W08bgBTaYpMU7g/6KQO7UQqLAfHUSCGO6Wf8Gj4PFgcuXe/X/3wI0sruEQKj+W6PQc5bWmtkZc3yfcVnyBlljb1+fY8n3JdqbBmv1UAKbbFNCm5T0waRG0dLQI8Fp3xTiGHI5uEwTzUsBN2Xv68kBaM3uicGYpJMuoffjRXIxKIUeM7UU70U1vqQvTtm76iuBlJoi81SSBtyQQJ6PMH3Ln5VppoaKcgaFS5TPvr5ct7Qt+5NzKMDTJTXyyxIYS7ZDVJQfYjwFp4p5qmpcUAKbbFDCg7+bRI3rt5EYew3rXXo0M2wAi/DOx97ZGBnawjoUFvzEHINUgrLgTXg9yfeQzq0uOqlMOs7PIfmKwY5fHZ0vqbGAym0xT4pOCg0tAF1KOYh4TBWbaxzpFAKajhfkgLLToTV+KawVwqiXyXWiTOlENeij1wK1nV/QAqtslsKcWP6gOlQ2CHh+qXwBKjuqBRmawjIGjmPvsZcJQVHDKW1jl1SyHqtCXJt2GvrwN/ggBQc+W/WrL4YkuJvx5xzpCDDHKH7bClYc7qzfi0XSSH1LAKn1hHgc0oKWmDiczPXv6MmjiGFZjgmBQeFJt+wyyGRIbOgDX9YCnGs+/K9mlKY1+fSy2vOk4KDr+UBpz6nEFIo82ewFPI5jWfoefbWQAptcVgKaVPr8BVDEjd0aZPR9eNS8PC58Dx/be3/FGJv8XA98vqonwuk4Iihn+bVfQ/qM4nvqBf9WvNT6I/VQAptYUrhvcQNX4wYePE7ghTaAlL4L4EUwHV8rBToqyw2os2LpBD/NMRn0RQfKAUAwDuBFAAAAkgBACCAFAAAAkgBAJAxjv8AWpJbmSxBMakAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'From'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="75644e19-f72e-43d4-b89a-2362c7494cb3" Text="[inputCurrency]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.unitconverters.net/currency-converter.html" CvType="InputBox" DesignTimeRectangle="479, 319, 276, 41" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT ucfrom'" FullSelectorArgument="&lt;webctrl id='uctable' tag='TABLE' /&gt;&lt;webctrl id='ucfrom' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='uctable' tag='TABLE' /&gt;&lt;webctrl id='ucfrom' type='text' tag='INPUT' class='ucinput' aaname='From:' /&gt;" Guid="797aac50-185a-4cf2-a0bd-6ce4e5407e1c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARgAAAAtCAYAAAB1TnQmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJGSURBVHhe7dg/quJQGIbxuwQ795Q1ZQ9aapIqlgquIJUbyA60sDFBRSzEP+Qb3hPiOMMd0Tt+3fODt5ATLB9O8rXb7ezvbbdbxhj7r6klfwTmeDza9Xq1pmkMAF6lZpzPZzscDlZVldV1HSJzD8zpdAoPTqdTi6LI+v2+9Xo9xhh7OrVCzVA7RJFZr9chNCEwurlIHMff/gFjjL0yNUQUmNVqZV+6xui1SPXpHsqy7B4dAHhGrVAzun6oJfv93sqybAOj9yddcbq4AMC7usioJbfbzYqiaAMj3TcXbi4AfkLtUEPUEpnNZr8DowMNAH7qsSN5nhMYAJ/z2JE0TQkMgM957EiSJAQGwOc8dmQ0GhEYAJ9DYAC4ITAA3BAYAG4IDAA3BAaAGwIDwA2BAeCGwABwQ2AAuCEwANwQGABuCAwANwQGgBsCA8ANgQHghsAAcENgALghMADcEBgAbggMADcEBoAbAgPADYEB4IbAAHBDYAC4ITAA3PwzMP1+Pxwcj8fwGwDeoXaoIWqJ3APTNI1FURQOsywLhwDwDrVDDVFLrterJUnSBuZyudh0Og2HXWS4yQB4hVrRxUVTS5bLpaVp2gbmcDiEB+M4vj/EGGPvTg2R+XxueZ63gamq6h4Z1UdXnO6bDGOMPZtaoWaoHbJYLGwwGNhsNmsDU9e1rdfrsP1+b7fbLTwIAK/QNxe9FunmMhwObTKZWFEUbWC0zWZjq9XKyrIMB6qPrjh6jxqPx+GLMGOMfTc1Qq1QM9QONaQsS/sFtCHPHCR+EAsAAAAASUVORK5CYII=" InformativeScreenshot="ed976111b8ab1120da519e51fe87cbbb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Currency Converter' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="477, 344, 46, 21" ElementType="Text" FriendlyName="'From'" FullSelectorArgument="&lt;webctrl id='uctable' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='uctable' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='' aaname='From:' check:innerText='From:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC4AAAAVCAYAAAA5BNxZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADvSURBVFhH7dI9CoQwEAXgPYKdd/JMHkTRylaPoAiWVjY2YmFh4b+InYhvmWE37AnCLOTBK0Kab5J5resKimVZ3H+JgeuOgeuOgeuOgeuOgeuOgtu2zfDzPPksPQx/ngeO4zA8DMPPleww/LouxHGs1oXw0l+e4cdx8MF1XYWXXoZP06Tw9PK0Nt+dl1qGz/OMvu+5+77jvm8eQnIYTh3HEV3XoaoqZFmGJEkQRRGCIIDv+/A8T1Rf27YxfFkWDMPA+LquUZYliqJAnuc8SJqmosrwXzztO60MDdC2LZqmEVkF/+KptPM0AJV+QV4HvAFKflceQlyRigAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NGetText DisplayName="Get Text 'To'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="75644e19-f72e-43d4-b89a-2362c7494cb3" TextString="[outputcurrency]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.unitconverters.net/currency-converter.html" CvElementArea="787, 343, 279, 44" CvTextArea="796, 354, 73, 19" CvTextArgument="91.0202" CvType="InputBox" DesignTimeRectangle="788, 344, 276, 41" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'91.0202'" FullSelectorArgument="&lt;webctrl id='uctable' tag='TABLE' /&gt;&lt;webctrl id='ucto' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='uctable' tag='TABLE' /&gt;&lt;webctrl id='ucto' type='text' tag='INPUT' class='ucinput' aaname='To:' /&gt;" Guid="afce8d1a-99cd-4ea6-84ad-e6922dd58ec8" InformativeScreenshot="f3a9d160120b178c7b6fcb293e0bbd29.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Currency Converter' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArgument="To:" CvType="Text" DesignTimeRectangle="788, 326, 21, 17" ElementType="Text" FriendlyName="'To'" FullSelectorArgument="&lt;webctrl id='uctable' tag='TABLE' /&gt;&lt;webctrl aaname='To:' tableRow='1' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='uctable' tag='TABLE' /&gt;&lt;webctrl aaname='To:' type='' tag='LABEL' class='' check:innerText='To:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABkAAAAVCAYAAACzK0UYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADOSURBVEhL7ZPBDYUgDEA5MgxLwM0tWINRnISbAziDZ0IwskJ/aoIBRYXIz/fwDy+m1fZZqsR7D9/mL6likyilgBBySd/3hwYlZCcxxoCUchXn7tfyTgke2dURYs2+rkqCMWMMxnFcY7xifLerYkloqLVOnkWBEAKmaUryMcUSbB5PETiTx1RJcm/cXHI2Cef8kI95104QjONpgrjZ1xXAhvF/sp8Ma/Z1WUlrfidZlqUpiSQk53kG59yKtfYxmwSbD8MAXdcBpTRZ7jMIfACZJQMndt67OwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="388,85" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[outputcurrency]" />
+            <uix:NNavigateBrowser Action="CloseTab" DisplayName="Navigate Browser - Close Tab" sap:VirtualizedContainerService.HintSize="388,82" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V3" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1048" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAGUExURf///wBmM9m1fkkAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAAdklEQVQ4T5XP2wrAIAwDUPv/Pz0mQZuLzOVltjkoG7Uy3uC80zdR0CIJnoPQ0YTdqEKBCQMq5hiC+gyWwOhBf/EEvjvc//9N7RVYL8B7BqEnkPoOYt/A7ENQH/t78PkEBM47fRMFLZLgOQgdTdiNKhSYMMCi6gHJKwLNWTdhHwAAAABJRU5ErkJggg==" InformativeScreenshot="0f7d92215e517d233ef5a2ebfcb796ef.jpg" Selector="&lt;html app='chrome.exe' title='Unit Converter' /&gt;" Title="Unit Converter" Url="https://www.unitconverters.net/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
